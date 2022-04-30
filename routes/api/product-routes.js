@@ -116,7 +116,7 @@ router.delete("/:id", async (req, res) => {
     const deletedProduct = await Product.destroy({
       where: { id: req.params.id },
     });
-    console.log(`Deleting product with ID: ${req.params.id} `);
+    console.log(`Deleting product with ID ${req.params.id} `);
     res.status(200).json(deletedProduct);
   } catch (err) {
     res.status(500).json(err);
